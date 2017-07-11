@@ -25,16 +25,24 @@ namespace OOPPractice
             get { return this.name; }
             set { this.name = value; }
         }
+        public int Age
+        {
+            get { return this.age; }
+        }
         //We also have behaviors
         //Methods - repeatable/reusable sections of code - Actions
         //and Constructors - Specialized methods that are used when instantiating an object
         //          -Allows us to control the state of an object upon creation
         //          Allow us to perform any actions the object might need upon creation
         //          Always share the name of the class
+
         public Cat()
         {
             //This is an example of a default constructor a default takes no arguements/parameters
         }
+        //You can have as many constructors as you want/need as long as they have unique signatrures.
+        //by signatures i mean parameters in the parentheses after the constructor name.
+
 
         public Cat(string name, int age, string furColor)
         {

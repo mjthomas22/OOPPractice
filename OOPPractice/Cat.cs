@@ -20,23 +20,38 @@ namespace OOPPractice
         private string furColor;
         private bool isHungry = true;
         //properties are a mix between field and methods that allow controlled access
-        public Name
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+        //We also have behaviors
+        //Methods - repeatable/reusable sections of code - Actions
+        //and Constructors - Specialized methods that are used when instantiating an object
+        //          -Allows us to control the state of an object upon creation
+        //          Allow us to perform any actions the object might need upon creation
+        //          Always share the name of the class
+        public Cat()
+        {
+            //This is an example of a default constructor a default takes no arguements/parameters
+        }
+
+        public Cat(string name, int age, string furColor)
+        {
+            this.name = name;
+            this.age = age;
+            this.furColor = furColor;
+        }
+
+        public void Eat()
+        {
+            if(isHungry)
             {
-                get {return this.name;}
-                set {this.name = ValueType
+                isHungry = false;
             }
-    //We also have behaviors
-    //Methods - repeatable/reusable sections of code - Actions
-    //and Constructors - Specialized methods that are used when instantiating an object
-    //          -Allows us to control the state of an object upon creation
-    //          Allow us to perform any actions the object might need upon creation
-    //          Always share the name of the class
-    public Cat()
-    {
-        //This is an example of a default constructor a default takes no arguements/parameters
+            Console.WriteLine("Is the cat hungry?{0}", isHungry);
+        }
     }
 
-
-
 }
-}
+
